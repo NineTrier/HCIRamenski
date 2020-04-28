@@ -159,8 +159,8 @@ var
    m:integer;
    namefile:string;
 begin
-  if SaveTip.Execute then begin
-  NameFile := SaveTip.FileName;
+  if OpenTip.Execute then begin
+  NameFile := OpenTip.FileName;
   AssignFile(ftip,NameFile);
   reset(ftip);
   m:=StrToInt(inputbox('Введите порядковый номер параметров','',''));
