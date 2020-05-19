@@ -1,0 +1,60 @@
+.container{
+/*   Заменить на 1480. Мне не нравится на 1480, слишком широко. А ещё у меня всё сбилось, когда я поставил 1480, а потом вернул( */
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+header{
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+}
+
+
+.call-us{
+    display: flex;
+    flex-direction: column;
+	height:70px;
+}
+
+
+
+
+/* Навигация */
+.main-nav{
+  display: flex; 
+}
+
+
+
+/* Основная часть */
+main{
+  display: flex;
+  flex-direction: row;
+}
+
+
+main section{
+  display: flex;
+  flex-direction: column;
+  flex: 2.5;
+}
+
+
+.row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+footer{
+  height: 100px;
+  background: gray;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
