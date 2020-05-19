@@ -174,7 +174,7 @@ p{
 }
 
 .advantage-item img{
-  background: var(--secondary);     /* И это не понял(*/
+  background: blue;     /* И это не понял(*/
 }
 
 .advantage-item span{
@@ -194,7 +194,7 @@ code{
 
 
 footer{
-  color: white;  
+  color: black;  
   background: #1398d1;
   font-size: 18px;
   margin-top: 15px;
