@@ -11,25 +11,25 @@
    */
   
 /*   основной цвет !!! */
-  --primary: #4444ff;
+  --primary: #006675;
 
 /* освновной цвет текста !!! */
-  --text: black;
+  --text: #000;
 
 /* дополнительный цвет !!! */
-  --secondary: #671;
+  --secondary: #f0fdff;
 /* долполнительный цвет. светлый вариант !!! */
-  --secondary-light: #5f7;
+  --secondary-light: #fff;
   
 /*   Акцидентный цвет и цвет шрифта на его фоне */
-  --accent: #f05;
-  --accent-text: #f0f;
+  --accent: #377500;
+  --accent-text: #ffffff;
   
   --accent2: #244d00;  /* используется только для подсветки кнопки акцидентного цвета при наведении */
   --accent2-text: #ffffff;
   
 /* основной размер шрифта !!! */
-  --size: 16px;
+  --size: 18px;
   
 /* остальные размеры текста 
    Они заданы для заголовкой и больших элементов 
@@ -44,24 +44,25 @@
 
 /* Для всей страницы !!! */
 body{
-  font-family: Courier, Times;    /* Основной и запасной шрифт */
+  font-family: Helvetica, Times;    /* Основной и запасной шрифт */
   /* Здесь задётся размер шрифта с помошью переменной. Переменная оборачивается в var*/
   font-weight: 800;
   font-size: var(--size);    
 /*   цвет шрифта всей страницы */
   color: var(--text);
   /* цвет фона всей страницы */
-  background: #ffffff;     /* !!! */
+  background: var(--secondary-light);     /* !!! */
 }
 
 
+
+
 /* Настройка внешнего вида списков, ссылок и отступа для параграфа */
-ul li{
+li{
   list-style-type: none;}
 
 
-
-.row ul li{
+.row li{
   list-style-type: square;}
 
 
@@ -74,8 +75,7 @@ p{
 
 /* заголовоки первого-третьего уровня */
 h1{
-  font-size: var(--size4);
-  margin-left:10px;
+  font-size: var(--size4)
 }
 
 h2{
@@ -86,33 +86,26 @@ h3{
   font-size: var(--size2)
 }
 
-span{
-  margin-left:10px;
-  font-size:26px;
-}
-
 
 
 /* Шапка */
-header{                       
-  background: #429ef5;
-  color: black;
-  border: 2px solid #09b3b3;
-  padding: 10px;
+header{                       /* !!! */
+  background: var(--secondary-light);
+  color: var(--text);
 }
 
 /* Заголовок и подзаголовок вместе */
 .Title{
-   font-size:20px; 
-   font-family: Times New Roman;      
+    /* Для заколовка можно задать особенный шрифт */
+/*   font-family: Georgia;      */
 }
 
 
 /* Правая часть заголовка */
 .Title-right{
-  background: #429ef5;
+  background: var(--secondary-light);
   color: var(--text);
-  height:40px;
+  
   display: flex;
   align-content: center;
   align-items: center;
@@ -120,33 +113,31 @@ header{
 
 /* Ссылка в заголовке (справа) */
 .Title-right a{
-  width:100px;
-  background: #429ef5;
+  background: var(--secondary-light);
   color: var(--primary);
-  padding:5px;
 }
 
 /* Посещеная ссылка в заголовке (справа) */
 .Title-right a:visited{
-  background: #429ef5;
-  color: #00488c;
+  background: var(--secondary-light);
+  color: var(--primary);
 }
 
 
 
 /* Навигация (строка меню) */
 .main-nav{
-  background: #8dc1f2;  /* !!! */
-  font-size: 22px;             /* --- */
+  background: var(--primary);  /* !!! */
+  font-size: var(--size2);             /* --- */
   margin-bottom: 30px;  
-  border: 2px solid #09b3b3;
 }
 
 
 /* Текст элемента меню */
 .main-nav li a{
   text-decoration: none;
-  color: black;                 /* ---- */
+  color: white;                 /* ---- */
+  
   height: 100%;
   padding: 29px;
 }
@@ -154,8 +145,8 @@ header{
 
 /* Текст элемента меню при наведении*/
 .main-nav li a:hover{
-  background:#0876c4 ;        /* --- */
-  color: white;        /* --- */
+  background: var(--accent);        /* --- */
+  color: var(--accent-text);        /* --- */
 }
 
 
@@ -165,29 +156,19 @@ header{
 /* Основной раздел */
 .main-section{
   margin-left: 15px;
-  background: white;
-  border:2px solid #09b3b3; 
+  background: var(--secondary-light);            /* !!! */
 }
 
 
 /* Блоки основного раздела */
 .row{
-  background: white;       /* !!! */
+  background: var(--secondary);       /* !!! */
   font-weight: 500;
   color: var(--text);                        /* !!! */
-  margin-left:2px;
-  padding: 30px;
-  border-bottom:1px dashed #6bb8ff;
-  border
+  
+  padding: 30px;  
 }
 
-#bt1{
-  border-bottom-color:white;
-}
-
-#row3{
-  border-bottom-color:white;	
-}
 
 /* .cite-author{
   text-align: right;
@@ -208,10 +189,11 @@ code{
 
 /* Заметная кнопка */
 .click-me{
-  background: #097ae3;      /* --- */
-  color: white;
+  background: var(--accent);      /* --- */
+  color: var(--accent-text);
   border-radius: 7px;
   padding: 8px 20px;
+  
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 800;             /* --- */
@@ -220,8 +202,8 @@ code{
 
 /* Заметная кнопка. При наведении */
 .click-me:hover{
-  background: #003a70;      /* --- */
-  color: white;
+  background: var(--accent2);      /* --- */
+  color: var(--accent2-text);
 }
 
 
@@ -230,10 +212,7 @@ code{
 
 /* Нижняя часть сайта, "подвал" */
 footer{
-  color: black; 
-  background: white;
-  border:2px solid #09b3b3;
-  margin-top:30px;
+  color: white;                     /* !!! */
 }
 
 

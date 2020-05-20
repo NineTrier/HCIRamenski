@@ -1,5 +1,12 @@
+/* Здесь описан layout -- макет, расположение элементов,
+внешний вид элементов описан в style.css
+
+Этот файл не рекомендуется изменять. Кроме случаев, 
+если вы точно знаете, что делаете.
+*/
+
+
 .container{
-/*   Заменить на 1480. Мне не нравится на 1480, слишком широко. А ещё у меня всё сбилось, когда я поставил 1480, а потом вернул( */
   width: 960px;
   margin: 0 auto;
 }
@@ -13,18 +20,13 @@ header{
 }
 
 
-.call-us{
-    display: flex;
-    flex-direction: column;
-	height:70px;
-}
-
-
-
 
 /* Навигация */
 .main-nav{
   display: flex; 
+  justify-content: flex-start;
+  height: 80px;
+  align-items: center;
 }
 
 
@@ -49,8 +51,17 @@ main section{
 }
 
 
+.end-row{
+  display: flex;
+}
+
+.end-row span{
+  margin: 0 auto;
+}
+
 
 footer{
+  width: 100%;
   height: 100px;
   background: gray;
   
