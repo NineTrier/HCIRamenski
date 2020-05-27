@@ -44,7 +44,7 @@
 
 /* Для всей страницы !!! */
 body{
-  font-family: Courier, Times;    /* Основной и запасной шрифт */
+  font-family: TimesNewRoman, Times;    /* Основной и запасной шрифт */
   /* Здесь задётся размер шрифта с помошью переменной. Переменная оборачивается в var*/
   font-weight: 800;
   font-size: var(--size);    
@@ -208,14 +208,15 @@ code{
 
 /* Заметная кнопка */
 .click-me{
-  background: #097ae3;      /* --- */
-  color: white;
+	
+  background: blue;      /* --- */
+  color: #0fe;
   border-radius: 7px;
   padding: 8px 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 800;             /* --- */
- 
+
 }
 
 /* Заметная кнопка. При наведении */
